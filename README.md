@@ -24,3 +24,49 @@ sms-receiver-frontend/ ├── index.html       # 主入口文件：HTML 结�
 
 ### 本地运行
 1. 克隆或下载仓库：
+
+
+2. 在浏览器中打开 `index.html`（双击文件或使用 VS Code Live Server 扩展）。
+3. 测试功能：导航滚动、点击卡片打开模态。
+
+### 部署到 GitHub Pages（免费托管）
+1. 在 GitHub 创建新仓库（e.g., `sms-receiver-frontend`），上传文件到根目录。
+2. 仓库设置 > Pages > Source: Deploy from branch > Branch: `main` > Save。
+3. 访问 URL：`https://yourusername.github.io/sms-receiver-frontend/`（1-2 分钟生效）。
+
+其他平台：Netlify/Vercel（拖拽上传文件夹）。
+
+## 使用示例
+- **查看号码列表**：页面加载后自动渲染卡片。示例卡片：
+- 手机号：`+86 13800138000`
+- 状态：`可用`
+- 短信：`["验证码: 123456", "欢迎使用平台"]`
+- **打开详情**：点击按钮，模态显示完整短信列表。
+- **自定义数据**：编辑 `script.js` 中的 `mockNumbers` 数组，保存后刷新浏览器。
+
+## 开发与扩展
+- **添加真实数据**：替换 `mockNumbers` 为 `fetch('/api/numbers')`，集成后端 API。
+- **增强功能**：
+- 实时更新：使用 WebSocket 监听短信变化。
+- 搜索/过滤：添加输入框过滤号码。
+- PWA 支持：添加 manifest.json 实现离线访问。
+- **构建工具**：可选集成 Parcel/Webpack 压缩文件。
+
+### 贡献指南
+1. Fork 仓库。
+2. 创建分支：`git checkout -b feature/new-feature`。
+3. 提交更改：`git commit -m "Add new feature"`。
+4. Push 并 PR：欢迎反馈与代码审查！
+
+## 故障排除
+- **页面不加载**：检查控制台 (F12) – 常见：路径错误（确保 `href="styles.css"`）。
+- **模态不响应**：确认 JS 事件绑定（`DOMContentLoaded`）。
+- **滚动卡顿**：旧浏览器兼容 – 添加 polyfill 或降级为 `window.scrollTo`。
+- **字体未加载**：网络问题 – 可替换为本地字体文件。
+
+## 许可证
+MIT License – 自由使用、修改和分发。详见 [LICENSE](LICENSE)（若未添加，可自行创建）。
+
+---
+
+*项目创建于 2025 年 10 月 23 日。反馈请 Issues 或联系 
