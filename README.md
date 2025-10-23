@@ -31,7 +31,7 @@ sms-receiver-frontend/
 
 ### 本地运行
 1. 克隆或下载仓库：
-```
+``` bash
 git clone https://github.com/yourusername/sms-receiver-frontend.git
 cd sms-receiver-frontend
 ```
