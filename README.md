@@ -20,14 +20,21 @@
 
 ## 文件结构
 ```
-sms-receiver-frontend/ ├── index.html       # 主入口文件：HTML 结构、链接 CSS/JS ├── styles.css       # 样式：主题、布局、交互效果 ├── script.js        # 逻辑：数据渲染、模态、滚动事件 ├── README.md        # 项目文档（本文件） └── .gitignore       # 可选：忽略临时文件（如 .DS_Store） 
+sms-receiver-frontend/
+├── index.html
+├── styles.css
+├── script.js
+├── README.md
+└── .gitignore (可选)
 ```
 ## 快速启动
 
 ### 本地运行
 1. 克隆或下载仓库：
-
-
+```
+git clone https://github.com/yourusername/sms-receiver-frontend.git
+cd sms-receiver-frontend
+```
 2. 在浏览器中打开 `index.html`（双击文件或使用 VS Code Live Server 扩展）。
 3. 测试功能：导航滚动、点击卡片打开模态。
 
